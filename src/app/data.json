@@ -1,0 +1,154 @@
+{
+  "profile": {
+    "name": "Furkan Gündüz",
+    "title": "Full-Stack Developer",
+    "location": "Çankaya, Ankara",
+    "image": "/profile.webp",
+    "availability": {
+      "status": true,
+      "text": "Available for work"
+    },
+    "email": "furkan@furkangunduz.com",
+    "social": {
+      "twitter": "#",
+      "linkedin": "https://www.linkedin.com/in/furkangunduz00/"
+    }
+  },
+  "buttons": {
+    "booking": {
+      "text": "Book Meeting",
+      "href": "https://calendly.com/d/cqyf-rr4-pgb/30-minute-meeting"
+    },
+    "cv": {
+      "text": "Download CV",
+      "href": "https://drive.google.com/file/d/1zA5V6xwlMgbyjckVygqkql8j_GEXSFnu/view?usp=drive_link"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "content": [
+      "Hello, I'm Furkan Gündüz - a developer passionate about web, mobile and server-side technologies.",
+      "My journey in web design began with a deep curiosity about how websites and the internet work, coupled with a desire to create innovative digital experiences. Over the years, I've honed my skills in front-end, back-end, and mobile development, constantly pushing the boundaries of what's possible in the digital realm."
+    ]
+  },
+  "stack": {
+    "title": "Stack",
+    "items": [
+      {
+        "icon": "typescript.svg",
+        "name": "Typescript"
+      },
+      {
+        "icon": "nextjs.svg",
+        "name": "NextJS"
+      },
+      {
+        "icon": "react.svg",
+        "name": "React / React-Native"
+      },
+      {
+        "icon": "nodejs.svg",
+        "name": "NodeJS"
+      },
+      {
+        "icon": "mongodb.svg",
+        "name": "MongoDB"
+      },
+      {
+        "icon": "expressjs.svg",
+        "name": "ExpressJS"
+      },
+      {
+        "icon": "expo.svg",
+        "name": "Expo"
+      },
+      {
+        "icon": "git.svg",
+        "name": "Git"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "id": "racedata",
+        "title": "RaceData.ai",
+        "category": "Frontend - Backend - Cloud",
+        "image": "/projects/racedata/image-1.png",
+        "href": "/projects/racedata",
+        "website": "https://racedata.ai",
+        "description": "RaceData.ai is an online platform that collects data from popular racing simulators like Assetto Corsa, iRacing, and Assetto Corsa Competizione. It analyzes important performance metrics—like braking, acceleration, and steering control—to help users understand and improve their racing techniques. Users can compare their results with others, making it a powerful tool for enhancing racing skills. It has a strong and flexible infrastructure to support its services.",
+        "services": "Full-Stack Development",
+        "client": "DrivenAVS",
+        "year": "2024",
+        "features": [
+          {
+            "title": "Collect telemetry data",
+            "description": "Seamlessly integrates with popular racing simulators such as Assetto Corsa, iRacing, and Assetto Corsa Competizione to automatically collect detailed telemetry data from your gameplay."
+          },
+          {
+            "title": "Performance Analysis",
+            "description": "The system breaks down critical racing metrics-such as braking, acceleration, and steering control-to analyze your driving style. This analysis highlights strengths and areas for improvement."
+          },
+          {
+            "title": "Performance Comparison",
+            "description": "Users can compare their performance to other racers on the platform, providing a competitive and community-driven approach to improving racing skills."
+          },
+          {
+            "title": "Robust and Scalable Infrastructure",
+            "description": "Built on modern technologies such as Node.js, Express.js, MongoDB, Nginx, and hosted on AWS EC2 with AWS S3 integration, the backend is designed for high performance and scalability, effectively managing a growing user base and large data sets."
+          }
+        ],
+        "summary": "Essentially, RaceData.ai enables users to transform raw gameplay data into actionable insights, helping them refine their racing techniques and enjoy a more competitive and engaging experience.",
+        "images": [
+          "/projects/racedata/image-1.png",
+          "/projects/racedata/image-2.png",
+          "/projects/racedata/image-3.png",
+          "/projects/racedata/image-4.png"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "company": "Racedata.ai",
+        "position": "Full-Stack Developer",
+        "period": "June 2024 - Present",
+        "remote": true,
+        "achievements": [
+          "Led a team of 4 developers, overseeing the planning, execution, and delivery of key features, while maintaining high code quality and ensuring effective collaboration and communication within the team.",
+          "Developed a platform that collects telemetry data from racing games such as Assetto Corsa, iRacing, and Assetto Corsa Competizione to help users improve their racing statistics. The system analyzes when to brake, accelerate, and how to control the steering wheel, allowing users to compare their performance with other racers on the platform.",
+          "Constructed an End-to-End backend system with Node.js, Express.js, MongoDB, Nginx, AWS S3, and hosted on AWS EC2.",
+          "Successfully handled over 2,000 users and saved more than 10000 laps, demonstrating the platform's scalability and reliability."
+        ]
+      },
+      {
+        "company": "Kodgarage",
+        "position": "Full-Stack Developer",
+        "period": "Oct 2022 - May 2024",
+        "remote": true,
+        "achievements": [
+          "Developed an e-commerce site using React.js and Node.js, which led to a noticeable increase in online sales. This project involved creating a user-friendly interface and ensuring seamless backend operations.",
+          "Integrated the ThreeJS library to build a 3D design module for cardboard bags. This feature allowed users to easily customize various aspects of the bags, such as dimensions, text, texture, and frames, enhancing the overall user experience.",
+          "Led the conversion process of four existing web applications to iOS and Android platforms using React Native and Expo. This initiative significantly broadened the user base and improved accessibility across multiple devices.",
+          "Developed internal services for sending and receiving emails and SMS, as well as for storing, cropping, and adjusting the quality of images on a local server. These services streamlined communication and media management processes within the organization."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "location": "Cankaya Ankara",
+        "degree": "Computer Education and instructional Technology",
+        "school": "Middle East Technical University",
+        "period": "2019-2025",
+        "description": "I focus on advanced web technologies, user experience, front-end and back-end development."
+      }
+    ]
+  }
+}
