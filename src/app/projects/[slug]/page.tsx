@@ -1,4 +1,5 @@
 import data from '@/app/data.json';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -6,6 +7,39 @@ import { notFound } from 'next/navigation';
 interface Props {
   params: {
     slug: string;
+  };
+}
+
+// Generate metadata for each project page
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const project = data.projects.items.find((p) => p.id === params.slug);
+
+  if (!project) {
+    return {
+      title: 'Project Not Found',
+    };
+  }
+
+  return {
+    title: `${project.title} - Project by Furkan Gündüz`,
+    description: project.description,
+    openGraph: {
+      title: `${project.title} - Project by Furkan Gündüz`,
+      description: project.description,
+      type: 'article',
+      images: project.images.map((image) => ({
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: `${project.title} - Project Screenshot`,
+      })),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} - Project by Furkan Gündüz`,
+      description: project.description,
+      images: project.images,
+    },
   };
 }
 
