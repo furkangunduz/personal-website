@@ -5,14 +5,15 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate metadata for each project page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = data.projects.items.find((p) => p.id === params.slug);
+  const slug = (await params).slug;
+  const project = data.projects.items.find((p) => p.id === slug);
 
   if (!project) {
     return {
@@ -43,8 +44,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProjectDetail({ params }: Props) {
-  const project = data.projects.items.find((p) => p.id === params.slug);
+export default async function ProjectDetail({ params }: Props) {
+  const awaitedParams = (await params).slug;
+  const project = data.projects.items.find((p) => p.id === awaitedParams);
 
   if (!project) {
     notFound();
