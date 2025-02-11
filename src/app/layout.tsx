@@ -100,7 +100,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <head>
         <link rel='canonical' href='https://furkangunduz.com' />
-        <meta name='google-site-verification' content='your-google-verification-code' />
       </head>
       <body className={inter.className}>
         <script
