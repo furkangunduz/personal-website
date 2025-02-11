@@ -54,7 +54,7 @@ export interface PageData {
     };
     email: string;
     social: {
-      twitter: string;
+      github: string;
       linkedin: string;
     };
   };

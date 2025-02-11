@@ -1,17 +1,22 @@
 import Image from 'next/image';
+import { AnimateOnScroll } from './AnimateOnScroll';
 
 interface StackItemProps {
-  icon: string;
   name: string;
+  icon: string;
 }
 
-export function StackItem({ icon, name }: StackItemProps) {
+export function StackItem({ name, icon }: StackItemProps) {
   return (
-    <div className='flex items-center space-x-4'>
-      <div className='w-14 h-14 flex items-center justify-center bg-zinc-900 rounded-xl'>
-        <Image src={`/stack/${icon}`} alt={name} width={32} height={32} />
+    <AnimateOnScroll>
+      <div className='flex items-start space-x-4'>
+        <div className='relative w-12 h-12 rounded-lg overflow-hidden bg-zinc-800 flex-shrink-0'>
+          <Image src={icon} alt={name} fill className='p-2' />
+        </div>
+        <div className='space-y-1'>
+          <h3 className='text-lg font-medium'>{name}</h3>
+        </div>
       </div>
-      <span className='text-zinc-400 text-sm'>{name}</span>
-    </div>
+    </AnimateOnScroll>
   );
 }

@@ -7,23 +7,29 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://furkangunduz.com'),
   title: {
-    default: 'Furkan Gündüz - Full-Stack Developer',
-    template: '%s | Furkan Gündüz',
+    default: 'Furkan Gündüz - Full-Stack Developer | React, Node.js, TypeScript Expert',
+    template: '%s | Furkan Gündüz - Full-Stack Developer',
   },
   description:
-    'Furkan Gündüz is a Full-Stack Developer based in Ankara, Turkey, specializing in building exceptional web applications with modern technologies like React, Node.js, and TypeScript.',
+    'Full-Stack Developer based in Ankara, Turkey, with expertise in React, Node.js, TypeScript, and modern web technologies. Building scalable, performant web applications with a focus on user experience.',
   keywords: [
     'Furkan Gündüz',
     'Full-Stack Developer',
     'Software Engineer',
     'Web Developer',
     'React Developer',
-    'TypeScript',
-    'Node.js',
+    'TypeScript Expert',
+    'Node.js Developer',
+    'JavaScript Developer',
+    'Frontend Developer',
+    'Backend Developer',
     'Ankara',
     'Turkey',
+    'Web Development',
+    'Software Development',
+    'Tech Lead',
   ],
-  authors: [{ name: 'Furkan Gündüz' }],
+  authors: [{ name: 'Furkan Gündüz', url: 'https://furkangunduz.com' }],
   creator: 'Furkan Gündüz',
   publisher: 'Furkan Gündüz',
   formatDetection: {
@@ -31,32 +37,40 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: 'https://furkangunduz.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://furkangunduz.com',
-    siteName: 'Furkan Gündüz',
-    title: 'Furkan Gündüz - Full-Stack Developer',
-    description: 'Full-Stack Developer specializing in modern web technologies',
+    siteName: 'Furkan Gündüz - Full-Stack Developer',
+    title: 'Furkan Gündüz - Full-Stack Developer | React, Node.js Expert',
+    description:
+      'Full-Stack Developer specializing in React, Node.js, and modern web technologies. Building exceptional digital experiences.',
     images: [
       {
         url: '/profile.webp',
         width: 1200,
         height: 630,
         alt: 'Furkan Gündüz - Full-Stack Developer',
+        type: 'image/webp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Furkan Gündüz - Full-Stack Developer',
-    description: 'Full-Stack Developer specializing in modern web technologies',
+    description: 'Full-Stack Developer specializing in React, Node.js, and modern web technologies',
     images: ['/profile.webp'],
     creator: '@furkangunduz',
+    site: '@furkangunduz',
+    creatorId: '@furkangunduz',
   },
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
@@ -65,8 +79,19 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+  icons: {
+    icon: [
+      {
+        url: '/profile.webp',
+        type: 'image/webp',
+      },
+    ],
+    apple: [
+      {
+        url: '/profile.webp',
+        type: 'image/webp',
+      },
+    ],
   },
 };
 
@@ -75,6 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <head>
         <link rel='canonical' href='https://furkangunduz.com' />
+        <meta name='google-site-verification' content='your-google-verification-code' />
       </head>
       <body className={inter.className}>
         <script
@@ -83,20 +109,43 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
+              '@id': 'https://furkangunduz.com/#person',
               name: 'Furkan Gündüz',
+              givenName: 'Furkan',
+              familyName: 'Gündüz',
               url: 'https://furkangunduz.com',
-              image: 'https://furkangunduz.com/profile.webp',
+              image: {
+                '@type': 'ImageObject',
+                url: 'https://furkangunduz.com/profile.webp',
+                width: 1200,
+                height: 630,
+              },
               sameAs: [
-                // Add your social media profiles here
                 'https://github.com/furkangunduz',
                 'https://linkedin.com/in/furkangunduz',
+                // Add other social profiles if available
               ],
               jobTitle: 'Full-Stack Developer',
               worksFor: {
                 '@type': 'Organization',
                 name: 'Self-Employed',
               },
-              description: 'Full-Stack Developer based in Ankara, Turkey, specializing in building exceptional web applications.',
+              description: 'Full-Stack Developer based in Ankara, Turkey, specializing in React, Node.js, and modern web technologies.',
+              knowsAbout: [
+                'React',
+                'Node.js',
+                'TypeScript',
+                'JavaScript',
+                'Web Development',
+                'Full-Stack Development',
+                'Software Architecture',
+                'UI/UX Design',
+              ],
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Ankara',
+                addressCountry: 'Turkey',
+              },
             }),
           }}
         />

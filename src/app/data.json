@@ -10,7 +10,7 @@
     },
     "email": "furkan@furkangunduz.com",
     "social": {
-      "twitter": "#",
+      "github": "https://github.com/Furkangunduz",
       "linkedin": "https://www.linkedin.com/in/furkangunduz00/"
     }
   },
@@ -27,43 +27,43 @@
   "about": {
     "title": "About me",
     "content": [
-      "Hello, I'm Furkan Gündüz - a developer passionate about web, mobile and server-side technologies.",
-      "My journey in web design began with a deep curiosity about how websites and the internet work, coupled with a desire to create innovative digital experiences. Over the years, I've honed my skills in front-end, back-end, and mobile development, constantly pushing the boundaries of what's possible in the digital realm."
+      "Hello, I'm Furkan - a developer passionate about web, mobile and server-side technologies.",
+      "My journey in web developement began with a deep curiosity about how websites and the internet work, coupled with a desire to create innovative digital experiences. Over the years, I've honed my skills in front-end, back-end, and mobile development, constantly pushing the boundaries of what's possible in the digital realm."
     ]
   },
   "stack": {
     "title": "Stack",
     "items": [
       {
-        "icon": "typescript.svg",
+        "icon": "/stack/typescript.svg",
         "name": "Typescript"
       },
       {
-        "icon": "nextjs.svg",
+        "icon": "/stack/nextjs.svg",
         "name": "NextJS"
       },
       {
-        "icon": "react.svg",
+        "icon": "/stack/react.svg",
         "name": "React / React-Native"
       },
       {
-        "icon": "nodejs.svg",
+        "icon": "/stack/nodejs.svg",
         "name": "NodeJS"
       },
       {
-        "icon": "mongodb.svg",
+        "icon": "/stack/mongodb.svg",
         "name": "MongoDB"
       },
       {
-        "icon": "expressjs.svg",
+        "icon": "/stack/expressjs.svg",
         "name": "ExpressJS"
       },
       {
-        "icon": "expo.svg",
+        "icon": "/stack/expo.svg",
         "name": "Expo"
       },
       {
-        "icon": "git.svg",
+        "icon": "/stack/git.svg",
         "name": "Git"
       }
     ]
