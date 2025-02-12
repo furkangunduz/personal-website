@@ -1,71 +1,54 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import data from './data.json';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://furkangunduz.com'),
+  metadataBase: new URL(data.seo.baseUrl),
   title: {
-    default: 'Furkan Gündüz - Full-Stack Developer | React, Node.js, TypeScript Expert',
-    template: '%s | Furkan Gündüz - Full-Stack Developer',
+    default: data.seo.title,
+    template: data.seo.titleTemplate,
   },
-  description:
-    'Full-Stack Developer based in Ankara, Turkey, with expertise in React, Node.js, TypeScript, and modern web technologies. Building scalable, performant web applications with a focus on user experience.',
-  keywords: [
-    'Furkan Gündüz',
-    'Full-Stack Developer',
-    'Software Engineer',
-    'Web Developer',
-    'React Developer',
-    'TypeScript Expert',
-    'Node.js Developer',
-    'JavaScript Developer',
-    'Frontend Developer',
-    'Backend Developer',
-    'Ankara',
-    'Turkey',
-    'Web Development',
-    'Software Development',
-    'Tech Lead',
-  ],
-  authors: [{ name: 'Furkan Gündüz', url: 'https://furkangunduz.com' }],
-  creator: 'Furkan Gündüz',
-  publisher: 'Furkan Gündüz',
+  description: data.seo.description,
+  keywords: data.seo.keywords,
+  authors: [{ name: data.seo.author.name, url: data.seo.author.url }],
+  creator: data.seo.author.name,
+  publisher: data.seo.author.name,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   alternates: {
-    canonical: 'https://furkangunduz.com',
+    canonical: data.seo.baseUrl,
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://furkangunduz.com',
-    siteName: 'Furkan Gündüz - Full-Stack Developer',
-    title: 'Furkan Gündüz - Full-Stack Developer | React, Node.js Expert',
-    description:
-      'Full-Stack Developer specializing in React, Node.js, and modern web technologies. Building exceptional digital experiences.',
+    url: data.seo.baseUrl,
+    siteName: data.seo.title,
+    title: data.seo.title,
+    description: data.seo.description,
     images: [
       {
-        url: '/profile.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Furkan Gündüz - Full-Stack Developer',
+        url: data.seo.image.url,
+        width: data.seo.image.width,
+        height: data.seo.image.height,
+        alt: data.seo.image.alt,
         type: 'image/webp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Furkan Gündüz - Full-Stack Developer',
-    description: 'Full-Stack Developer specializing in React, Node.js, and modern web technologies',
-    images: ['/profile.webp'],
-    creator: '@furkangunduz',
-    site: '@furkangunduz',
-    creatorId: '@furkangunduz',
+    title: data.seo.title,
+    description: data.seo.description,
+    images: [data.seo.image.url],
+    creator: data.seo.social.twitter,
+    site: data.seo.social.twitter,
+    creatorId: data.seo.social.twitter,
   },
   robots: {
     index: true,
@@ -82,13 +65,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/profile.webp',
+        url: data.seo.image.url,
         type: 'image/webp',
       },
     ],
     apple: [
       {
-        url: '/profile.webp',
+        url: data.seo.image.url,
         type: 'image/webp',
       },
     ],
@@ -99,7 +82,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <head>
-        <link rel='canonical' href='https://furkangunduz.com' />
+        <link rel='canonical' href={data.seo.baseUrl} />
+        <meta name='google-site-verification' content={data.seo.verification.google} />
       </head>
       <body className={inter.className}>
         <script
@@ -108,42 +92,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              '@id': 'https://furkangunduz.com/#person',
-              name: 'Furkan Gündüz',
+              '@id': `${data.seo.baseUrl}/#person`,
+              name: data.seo.author.name,
               givenName: 'Furkan',
               familyName: 'Gündüz',
-              url: 'https://furkangunduz.com',
+              url: data.seo.baseUrl,
               image: {
                 '@type': 'ImageObject',
-                url: 'https://furkangunduz.com/profile.webp',
-                width: 1200,
-                height: 630,
+                url: `${data.seo.baseUrl}${data.seo.image.url}`,
+                width: data.seo.image.width,
+                height: data.seo.image.height,
               },
-              sameAs: [
-                'https://github.com/furkangunduz',
-                'https://linkedin.com/in/furkangunduz',
-                // Add other social profiles if available
-              ],
-              jobTitle: 'Full-Stack Developer',
+              sameAs: [data.seo.social.github, data.seo.social.linkedin],
+              jobTitle: data.seo.jobTitle,
               worksFor: {
                 '@type': 'Organization',
                 name: 'Self-Employed',
               },
-              description: 'Full-Stack Developer based in Ankara, Turkey, specializing in React, Node.js, and modern web technologies.',
-              knowsAbout: [
-                'React',
-                'Node.js',
-                'TypeScript',
-                'JavaScript',
-                'Web Development',
-                'Full-Stack Development',
-                'Software Architecture',
-                'UI/UX Design',
-              ],
+              description: data.seo.description,
+              knowsAbout: data.seo.expertise,
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Ankara',
-                addressCountry: 'Turkey',
+                addressLocality: data.seo.location.city,
+                addressCountry: data.seo.location.country,
               },
             }),
           }}

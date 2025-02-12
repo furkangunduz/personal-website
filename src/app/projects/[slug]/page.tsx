@@ -22,13 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const title = `${project.title} - Project by ${data.seo.author.name}`;
+
   return {
-    title: `${project.title} - Project by Furkan Gündüz`,
+    title: title,
     description: project.description,
     openGraph: {
-      title: `${project.title} - Project by Furkan Gündüz`,
+      title: title,
       description: project.description,
       type: 'article',
+      url: `${data.seo.baseUrl}/projects/${project.id}`,
       images: project.images.map((image) => ({
         url: image,
         width: 1200,
@@ -38,9 +41,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${project.title} - Project by Furkan Gündüz`,
+      title: title,
       description: project.description,
       images: project.images,
+      creator: data.seo.social.twitter,
+      site: data.seo.social.twitter,
     },
   };
 }

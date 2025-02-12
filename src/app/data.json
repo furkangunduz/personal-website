@@ -8,7 +8,7 @@
       "status": true,
       "text": "Available for work"
     },
-    "email": "furkan@furkangunduz.com",
+    "email": "furkan.gundz00@gmail.com",
     "social": {
       "github": "https://github.com/Furkangunduz",
       "linkedin": "https://www.linkedin.com/in/furkangunduz00/"
@@ -150,5 +150,61 @@
         "description": "I focus on advanced web technologies, user experience, front-end and back-end development."
       }
     ]
+  },
+  "seo": {
+    "baseUrl": "https://furkangunduz.com",
+    "title": "Furkan Gündüz - Full-Stack Developer | React, Node.js, TypeScript Expert",
+    "titleTemplate": "%s | Furkan Gündüz - Full-Stack Developer",
+    "description": "Full-Stack Developer based in Ankara, Turkey, with expertise in React, Node.js, TypeScript, and modern web technologies. Building scalable, performant web applications with a focus on user experience.",
+    "keywords": [
+      "Furkan Gündüz",
+      "Full-Stack Developer",
+      "Software Engineer",
+      "Web Developer",
+      "React Developer",
+      "TypeScript Expert",
+      "Node.js Developer",
+      "JavaScript Developer",
+      "Frontend Developer",
+      "Backend Developer",
+      "Ankara",
+      "Turkey",
+      "Web Development",
+      "Software Development",
+      "Tech Lead"
+    ],
+    "author": {
+      "name": "Furkan Gündüz",
+      "url": "https://furkangunduz.com"
+    },
+    "social": {
+      "github": "https://github.com/furkangunduz",
+      "linkedin": "https://linkedin.com/in/furkangunduz",
+      "twitter": "@furkangunduz"
+    },
+    "verification": {
+      "google": "your-google-verification-code"
+    },
+    "image": {
+      "url": "/profile.webp",
+      "width": 1200,
+      "height": 630,
+      "alt": "Furkan Gündüz - Full-Stack Developer"
+    },
+    "jobTitle": "Full-Stack Developer",
+    "expertise": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "Web Development",
+      "Full-Stack Development",
+      "Software Architecture",
+      "UI/UX Design"
+    ],
+    "location": {
+      "city": "Ankara",
+      "country": "Turkey"
+    }
   }
 }
