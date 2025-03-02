@@ -9,21 +9,22 @@ import data from './data.json';
 import type { PageData } from './types';
 
 const pageData = data as PageData;
+console.log(pageData);
 
 export default function Home() {
   return (
-    <main className='min-h-screen p-6 md:p-16 max-w-3xl mx-auto'>
+    <main className='mx-auto min-h-screen max-w-3xl p-6 md:p-16'>
       <div className='space-y-8'>
         {/* Header Section */}
         <AnimateOnScroll>
-          <div className='flex flex-col md:flex-row items-start md:items-center justify-between'>
+          <div className='flex flex-col items-start justify-between md:flex-row md:items-center'>
             <div className='flex items-center space-x-6'>
               <Image src={pageData.profile.image} alt={pageData.profile.name} width={100} height={100} className='profile-image' />
               <div className='space-y-1.5'>
                 <h1 className='text-2xl font-semibold'>{pageData.profile.name}</h1>
                 <p className='text-lg text-zinc-400'>{pageData.profile.title}</p>
-                <div className='flex items-center text-zinc-400 text-sm'>
-                  <svg className='w-4 h-4 mr-1.5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <div className='flex items-center text-sm text-zinc-400'>
+                  <svg className='mr-1.5 h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path
                       strokeLinecap='round'
                       strokeLinejoin='round'
@@ -36,18 +37,18 @@ export default function Home() {
                 </div>
                 <div className='flex items-center text-sm'>
                   <span className='availability-dot ml-1'></span>
-                  <span className='text-zinc-400 ml-1.5'>{pageData.profile.availability.text}</span>
+                  <span className='ml-1.5 text-zinc-400'>{pageData.profile.availability.text}</span>
                 </div>
               </div>
             </div>
-            <div className='flex flex-col space-y-4 mt-6 md:mt-0'>
+            <div className='mt-6 flex flex-col space-y-4 md:mt-0'>
               <Link
                 href={pageData.buttons.booking.href}
                 className='animated-link inline-flex items-center text-sm'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <svg className='w-4 h-4 mr-2' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <svg className='mr-2 h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                   <path
                     strokeLinecap='round'
                     strokeLinejoin='round'
@@ -63,7 +64,7 @@ export default function Home() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <svg className='w-4 h-4 mr-2' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <svg className='mr-2 h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                   <path
                     strokeLinecap='round'
                     strokeLinejoin='round'
@@ -79,9 +80,9 @@ export default function Home() {
 
         {/* Contact Section */}
         <AnimateOnScroll>
-          <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 border-t border-zinc-800 pt-6'>
+          <div className='flex flex-col items-start justify-between space-y-3 border-t border-zinc-800 pt-6 md:flex-row md:items-center md:space-y-0'>
             <Link href={`mailto:${pageData.profile.email}`} className='animated-link inline-flex items-center text-sm'>
-              <svg className='w-4 h-4 mr-1.5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <svg className='mr-1.5 h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                 <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
@@ -94,7 +95,7 @@ export default function Home() {
             <div className='flex space-x-4 text-sm'>
               <Link
                 href={pageData.profile.social.github}
-                className='animated-link text-zinc-400 hover:text-white transition-colors'
+                className='animated-link text-zinc-400 transition-colors hover:text-white'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -102,7 +103,7 @@ export default function Home() {
               </Link>
               <Link
                 href={pageData.profile.social.linkedin}
-                className='animated-link text-zinc-400 hover:text-white transition-colors'
+                className='animated-link text-zinc-400 transition-colors hover:text-white'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -116,7 +117,7 @@ export default function Home() {
         <AnimateOnScroll>
           <section className='space-y-6 border-zinc-800 pt-8'>
             <h2 className='text-2xl font-semibold'>{pageData.about.title}</h2>
-            <div className='space-y-4 text-zinc-400 text-md'>
+            <div className='text-md space-y-4 text-zinc-400'>
               {pageData.about.content.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
@@ -128,7 +129,7 @@ export default function Home() {
         <AnimateOnScroll>
           <section className='space-y-8 border-t border-zinc-800 pt-8'>
             <h2 className='text-2xl font-semibold'>{pageData.stack.title}</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
               {pageData.stack.items.map((item) => (
                 <StackItem key={item.name} {...item} />
               ))}
@@ -140,7 +141,7 @@ export default function Home() {
         <AnimateOnScroll>
           <section className='space-y-8 border-t border-zinc-800 pt-8'>
             <h2 className='text-2xl font-semibold'>{pageData.projects.title}</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
               {pageData.projects.items.map((project) => (
                 <ProjectCard key={project.id} {...project} />
               ))}
