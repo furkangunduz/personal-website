@@ -153,7 +153,10 @@ export default function Home() {
         <AnimateOnScroll>
           <section className='space-y-8 pt-8'>
             <div className='flex items-center justify-between'>
-              <h2 className='text-2xl font-semibold'>{pageData.experience.title}</h2>
+              <h2 className='text-2xl font-semibold'>
+                {pageData.experience.title}
+                {pageData.experience.title}
+              </h2>
             </div>
             <div className='space-y-8'>
               {pageData.experience.items.map((item) => (
