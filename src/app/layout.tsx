@@ -67,12 +67,31 @@ export const metadata: Metadata = {
       {
         url: data.seo.image.url,
         type: 'image/webp',
+        sizes: '32x32',
+      },
+      {
+        url: data.seo.image.url,
+        type: 'image/webp',
+        sizes: '16x16',
+      },
+    ],
+    shortcut: [
+      {
+        url: data.seo.image.url,
+        type: 'image/webp',
       },
     ],
     apple: [
       {
         url: data.seo.image.url,
         type: 'image/webp',
+        sizes: '180x180',
+      },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: data.seo.image.url,
       },
     ],
   },
