@@ -2,4 +2,12 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://furkangunduz.com/sitemap.xml 
+Sitemap: https://furkangunduz.com/sitemap.xml
+
+# Allow all bots full access
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Slurp
+Allow: / 
