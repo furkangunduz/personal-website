@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import type { ExperienceItem as ExperienceItemType } from '../types';
 import { AnimateOnScroll } from './AnimateOnScroll';
 
-export function ExperienceItem({ company, position, period, remote, achievements }: ExperienceItemType) {
+export function ExperienceItem({ company, website, position, period, remote, achievements }: ExperienceItemType) {
   return (
     <AnimateOnScroll>
       <div className='relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-[1px] before:bg-zinc-800'>
@@ -9,7 +10,14 @@ export function ExperienceItem({ company, position, period, remote, achievements
           <div className='flex flex-col md:flex-row justify-between items-start md:items-center'>
             <div className='space-y-1'>
               <div className='flex items-center justify-between'>
-                <h3 className='text-base font-medium'>{company}</h3>
+                <Link
+                  href={website}
+                  className='text-base font-medium hover:text-zinc-300 transition-colors'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {company}
+                </Link>
                 <div className='flex items-center space-x-2 md:hidden'>
                   {remote && <span className='text-xs text-zinc-500 px-2 py-0.5 rounded-full border border-zinc-800'>Remote</span>}
                   <p className='text-sm text-zinc-500'>{period}</p>

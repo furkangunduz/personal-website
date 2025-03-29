@@ -9,7 +9,6 @@ import data from './data.json';
 import type { PageData } from './types';
 
 const pageData = data as PageData;
-console.log(pageData);
 
 export default function Home() {
   return (

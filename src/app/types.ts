@@ -23,6 +23,7 @@ export interface Experience {
 
 export interface ExperienceItem {
   company: string;
+  website: string;
   position: string;
   period: string;
   remote: boolean;

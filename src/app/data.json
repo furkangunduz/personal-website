@@ -35,6 +35,14 @@
     "title": "Stack",
     "items": [
       {
+        "icon": "/stack/graphql.svg",
+        "name": "GraphQL"
+      },
+      {
+        "icon": "/stack/nestjs.svg",
+        "name": "NestJS"
+      },
+      {
         "icon": "/stack/typescript.svg",
         "name": "Typescript"
       },
@@ -42,10 +50,7 @@
         "icon": "/stack/nextjs.svg",
         "name": "NextJS"
       },
-      {
-        "icon": "/stack/react.svg",
-        "name": "React / React-Native"
-      },
+
       {
         "icon": "/stack/nodejs.svg",
         "name": "NodeJS"
@@ -53,6 +58,18 @@
       {
         "icon": "/stack/mongodb.svg",
         "name": "MongoDB"
+      },
+      {
+        "icon": "/stack/mysql.svg",
+        "name": "MySQL"
+      },
+      {
+        "icon": "/stack/redis.svg",
+        "name": "Redis"
+      },
+      {
+        "icon": "/stack/docker.svg",
+        "name": "Docker"
       },
       {
         "icon": "/stack/expressjs.svg",
@@ -115,6 +132,7 @@
     "items": [
       {
         "company": "Pixasoftware",
+        "website": "https://pixasoftware.com",
         "position": "Backend Developer",
         "period": "March 2025 - Present",
         "remote": true,
@@ -122,6 +140,7 @@
       },
       {
         "company": "Racedata.ai",
+        "website": "https://racedata.ai",
         "position": "Full-Stack Developer",
         "period": "June 2024 - March 2025",
         "remote": true,
@@ -134,6 +153,7 @@
       },
       {
         "company": "Kodgarage",
+        "website": "https://kodgarage.com",
         "position": "Full-Stack Developer",
         "period": "Oct 2022 - May 2024",
         "remote": true,
