@@ -114,9 +114,16 @@
     "title": "Experience",
     "items": [
       {
+        "company": "Pixasoftware",
+        "position": "Backend Developer",
+        "period": "March 2025 - Present",
+        "remote": true,
+        "achievements": ["Working with GraphQL, NestJS, and TypeScript in a microservices architecture"]
+      },
+      {
         "company": "Racedata.ai",
         "position": "Full-Stack Developer",
-        "period": "June 2024 - Present",
+        "period": "June 2024 - March 2025",
         "remote": true,
         "achievements": [
           "Led a team of 4 developers, overseeing the planning, execution, and delivery of key features, while maintaining high code quality and ensuring effective collaboration and communication within the team.",
