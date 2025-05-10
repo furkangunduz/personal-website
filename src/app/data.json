@@ -3,7 +3,7 @@
     "name": "Furkan Gündüz",
     "title": "Full-Stack Developer",
     "location": "Çankaya, Ankara",
-    "image": "/profile.webp",
+    "image": "/profile.jpeg",
     "availability": {
       "status": true,
       "text": "Available for work"
@@ -214,7 +214,7 @@
       "google": "your-google-verification-code"
     },
     "image": {
-      "url": "/profile.webp",
+      "url": "/profile.jpeg",
       "width": 1200,
       "height": 630,
       "alt": "Furkan Gündüz - Full-Stack Developer"
