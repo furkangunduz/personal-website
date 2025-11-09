@@ -12,7 +12,7 @@ const pageData = data as PageData;
 
 export default function Home() {
   return (
-    <main className='mx-auto min-h-screen max-w-3xl p-6 md:p-16'>
+    <main className='mx-auto min-h-screen max-w-4xl p-6 md:p-16'>
       <div className='space-y-8'>
         {/* Header Section */}
         <AnimateOnScroll>
@@ -115,9 +115,6 @@ export default function Home() {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <span className='mr-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full border border-current'>
-                    <span className='h-2 w-2 rounded-full bg-current' />
-                  </span>
                   Medium
                 </Link>
               )}
@@ -125,41 +122,31 @@ export default function Home() {
           </div>
         </AnimateOnScroll>
 
-        {/* About Section */}
+        {/* About + Stack Section */}
         <AnimateOnScroll>
-          <section className='space-y-6 border-zinc-800 pt-8'>
-            <h2 className='text-2xl font-semibold'>{pageData.about.title}</h2>
-            <div className='text-md space-y-4 text-zinc-400'>
-              {pageData.about.content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+          <section className='space-y-8 border-t border-zinc-800 pt-8 md:space-y-0'>
+            <div className='flex flex-col gap-12 md:flex-row md:gap-16'>
+              <div className='flex-1 space-y-6'>
+                <h2 className='text-2xl font-semibold'>{pageData.about.title}</h2>
+                <div className='text-md space-y-4 text-zinc-400'>
+                  {pageData.about.content.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+              <div className='flex-1 space-y-6 border-t border-zinc-800 pt-8 md:border-t-0 md:pt-0'>
+                <h2 className='text-2xl font-semibold'>{pageData.stack.title}</h2>
+                <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
+                  {pageData.stack.items.map((item) => (
+                    <StackItem key={item.name} {...item} />
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
         </AnimateOnScroll>
 
-        {/* Stack Section */}
-        <AnimateOnScroll>
-          <section className='space-y-8 border-t border-zinc-800 pt-8'>
-            <h2 className='text-2xl font-semibold'>{pageData.stack.title}</h2>
-            <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-              {pageData.stack.items.map((item) => (
-                <StackItem key={item.name} {...item} />
-              ))}
-            </div>
-          </section>
-        </AnimateOnScroll>
-
-        {/* Projects Section */}
-        <AnimateOnScroll>
-          <section className='space-y-8 border-t border-zinc-800 pt-8'>
-            <h2 className='text-2xl font-semibold'>{pageData.projects.title}</h2>
-            <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-              {pageData.projects.items.map((project) => (
-                <ProjectCard key={project.id} {...project} />
-              ))}
-            </div>
-          </section>
-        </AnimateOnScroll>
+       
 
         {/* Experience Section */}
         <AnimateOnScroll>
@@ -170,6 +157,18 @@ export default function Home() {
             <div className='space-y-8'>
               {pageData.experience.items.map((item) => (
                 <ExperienceItem key={item.company} {...item} />
+              ))}
+            </div>
+          </section>
+        </AnimateOnScroll>
+        
+        {/* Projects Section */}
+        <AnimateOnScroll>
+          <section className='space-y-8 border-t border-zinc-800 pt-8'>
+            <h2 className='text-2xl font-semibold'>{pageData.projects.title}</h2>
+            <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
+              {pageData.projects.items.map((project) => (
+                <ProjectCard key={project.id} {...project} />
               ))}
             </div>
           </section>
