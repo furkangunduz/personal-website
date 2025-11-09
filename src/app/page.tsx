@@ -136,7 +136,7 @@ export default function Home() {
               </div>
               <div className='flex-1 space-y-6 border-t border-zinc-800 pt-8 md:border-t-0 md:pt-0'>
                 <h2 className='text-2xl font-semibold'>{pageData.stack.title}</h2>
-                <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
+                <div className='grid grid-cols-4 gap-6'>
                   {pageData.stack.items.map((item) => (
                     <StackItem key={item.name} {...item} />
                   ))}

@@ -9,7 +9,7 @@ interface StackItemProps {
 export function StackItem({ name, icon }: StackItemProps) {
   return (
     <AnimateOnScroll>
-      <div className='group relative flex items-center space-x-4 md:flex-col md:space-x-0 md:space-y-3 md:text-center'>
+      <div className='group relative flex flex-col items-center space-y-3 text-center'>
         <div
           className='relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-zinc-800 transition-transform duration-200 group-hover:scale-105 group-focus-visible:scale-105'
           tabIndex={0}
