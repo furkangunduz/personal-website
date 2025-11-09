@@ -137,7 +137,11 @@
         "position": "Backend Developer",
         "period": "Mar 2025 - Present",
         "remote": true,
-        "achievements": ["Working with GraphQL, NestJS, and TypeScript in a microservices architecture"]
+        "achievements": [
+          "Designed and shipped GraphQL- and NestJS-based services that deliver faster, more flexible data flows, while reusable schemas, resolvers, and types accelerated feature delivery and simplified maintenance.",
+          "Maintained and scaled an integration hub that connects with 50+ e-commerce marketplaces using Node.js, Express.js, NestJS, and SQL—optimizing performance, hardening reliability, and tightening error observability across connectors.",
+          "Built custom integrations for marketplaces such as Temu and Amazon SellerFlex, implementing synchronized inventory and order pipelines that prevent overselling through rigorous cross-stock management."
+        ]
       },
       {
         "company": "Racedata.ai",
