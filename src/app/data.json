@@ -28,8 +28,8 @@
   "about": {
     "title": "About me",
     "content": [
-      "Hello, I'm Furkan - a developer passionate about web, mobile and server-side technologies.",
-      "My journey in web developement began with a deep curiosity about how websites and the internet work, coupled with a desire to create innovative digital experiences. Over the years, I've honed my skills in front-end, back-end, and mobile development, constantly pushing the boundaries of what's possible in the digital realm."
+      "I’m Furkan, a full-stack developer who enjoys turning ambitious product ideas into reliable web and mobile experiences.",
+      "From telemetry-driven racing platforms to large-scale marketplace integrations, I build data-rich backends with GraphQL, NestJS, and SQL, keep systems resilient, and help teams move fast without sacrificing quality."
     ]
   },
   "stack": {
