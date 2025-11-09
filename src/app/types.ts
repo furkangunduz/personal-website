@@ -57,6 +57,7 @@ export interface PageData {
     social: {
       github: string;
       linkedin: string;
+      medium?: string;
     };
   };
   buttons: {

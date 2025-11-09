@@ -108,6 +108,19 @@ export default function Home() {
               >
                 LinkedIn
               </Link>
+              {pageData.profile.social.medium && (
+                <Link
+                  href={pageData.profile.social.medium}
+                  className='animated-link text-zinc-400 transition-colors hover:text-white'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <span className='mr-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full border border-current'>
+                    <span className='h-2 w-2 rounded-full bg-current' />
+                  </span>
+                  Medium
+                </Link>
+              )}
             </div>
           </div>
         </AnimateOnScroll>
