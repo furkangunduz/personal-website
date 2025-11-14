@@ -58,6 +58,7 @@ export interface PageData {
       github: string;
       linkedin: string;
       medium?: string;
+      codewars?: string;
     };
   };
   buttons: {

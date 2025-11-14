@@ -79,7 +79,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <AnimateOnScroll>
-          <div className='flex flex-col items-start justify-between space-y-3 border-t border-zinc-800 pt-6 md:flex-row md:items-center md:space-y-0'>
+          <div className='flex flex-col space-y-4 border-t border-zinc-800 pt-6 md:flex-row md:items-center md:justify-between md:space-y-0'>
             <Link href={`mailto:${pageData.profile.email}`} className='animated-link inline-flex items-center text-sm'>
               <svg className='mr-1.5 h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                 <path
@@ -91,7 +91,7 @@ export default function Home() {
               </svg>
               {pageData.profile.email}
             </Link>
-            <div className='flex space-x-4 text-sm'>
+            <div className='flex items-center space-x-4 text-sm'>
               <Link
                 href={pageData.profile.social.github}
                 className='animated-link text-zinc-400 transition-colors hover:text-white'
@@ -116,6 +116,23 @@ export default function Home() {
                   rel='noopener noreferrer'
                 >
                   Medium
+                </Link>
+              )}
+              {pageData.profile.social.codewars && (
+                <Link
+                  href={pageData.profile.social.codewars}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='group inline-flex items-center transition-opacity hover:opacity-80'
+                >
+                  <Image
+                    src='https://www.codewars.com/users/deathPunch/badges/micro'
+                    alt='CodeWars Badge'
+                    width={120}
+                    height={20}
+                    className='h-5 w-auto opacity-90 transition-opacity group-hover:opacity-100'
+                    unoptimized
+                  />
                 </Link>
               )}
             </div>
@@ -146,8 +163,6 @@ export default function Home() {
           </section>
         </AnimateOnScroll>
 
-       
-
         {/* Experience Section */}
         <AnimateOnScroll>
           <section className='space-y-8 pt-8'>
@@ -161,7 +176,7 @@ export default function Home() {
             </div>
           </section>
         </AnimateOnScroll>
-        
+
         {/* Projects Section */}
         <AnimateOnScroll>
           <section className='space-y-8 border-t border-zinc-800 pt-8'>
